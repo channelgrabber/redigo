@@ -19,8 +19,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/garyburd/redigo/internal/redistest"
-	"github.com/garyburd/redigo/redis"
+	"github.com/channelgrabber/redigo/internal/redistest"
+	"github.com/channelgrabber/redigo/redis"
 )
 
 type valueError struct {

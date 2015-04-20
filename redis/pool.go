@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/garyburd/redigo/internal"
+	"github.com/channelgrabber/redigo/internal"
 )
 
 var nowFunc = time.Now // for testing
