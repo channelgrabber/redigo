@@ -54,6 +54,10 @@ type PMessage struct {
 	Data []byte
 }
 
+// Pong represents a reply to ping
+type Pong struct {
+}
+
 // PubSubConn wraps a Conn with convenience methods for subscribers.
 type PubSubConn struct {
 	Conn Conn
@@ -124,6 +128,8 @@ func (c PubSubConn) Receive() interface{} {
 			return err
 		}
 		return s
+	case "pong":
+		return Pong{}
 	}
 	return errors.New("redigo: unknown pubsub notification")
 }
